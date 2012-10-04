@@ -1,0 +1,11 @@
+<%= div_for comment do %>
+	<p><strong>
+	Posted <%= time_ago_in_words(comment.created_at) %>
+</p>
+	<p>
+	Posted by: <%= link_to_unless_current h(comment.author) %>
+</strong></p>
+<p>
+	<%= h(comment.body) %>
+</p><br />
+<% end %>
